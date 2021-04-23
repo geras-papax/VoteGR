@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">VoteGR</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">VoteGR</string>
+    <string name="nav_header_subtitle">Ψήφισε με ασφάλεια</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Ρυθμίσεις</string>
+
+    <string name="menu_home">Κεντρική</string>
+    <string name="menu_vote">Ψήφισε</string>
+    <string name="menu_parties">Θέσεις Κομμάτων</string>
+    <string name="menu_history">Ιστορικό</string>
+
+    <string name="answer_yes">ΝΑΙ</string>
+    <string name="answer_no">ΟΧΙ</string>
+    <string name="answer_white">ΛΕΥΚΟ</string>
+    <string name="vote_title">ΔΗΜΟΨΗΦΙΣΜΑ</string>
+
+
+</resources>
