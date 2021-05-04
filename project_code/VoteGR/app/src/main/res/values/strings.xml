@@ -9,6 +9,7 @@
 
     <string name="menu_home">Κεντρική</string>
     <string name="menu_vote">Ψήφισε</string>
+    <string name="menu_stats">Στατιστικά Live</string>
     <string name="menu_parties">Θέσεις Κομμάτων</string>
     <string name="menu_history">Ιστορικό</string>
 
@@ -16,6 +17,5 @@
     <string name="answer_no">ΟΧΙ</string>
     <string name="answer_white">ΛΕΥΚΟ</string>
     <string name="vote_title">ΔΗΜΟΨΗΦΙΣΜΑ</string>
-
 
 </resources>
