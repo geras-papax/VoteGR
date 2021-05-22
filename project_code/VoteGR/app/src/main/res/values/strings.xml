@@ -13,9 +13,19 @@
     <string name="menu_parties">Θέσεις Κομμάτων</string>
     <string name="menu_history">Ιστορικό</string>
 
+    <string name="menu_statement">Ανάρτηση Θέσης</string>
+
     <string name="answer_yes">ΝΑΙ</string>
     <string name="answer_no">ΟΧΙ</string>
     <string name="answer_white">ΛΕΥΚΟ</string>
     <string name="vote_title">ΔΗΜΟΨΗΦΙΣΜΑ</string>
+
+    <string name="submit">Υποβολή</string>
+    <string name="statement_title">ΘΕΣΗ ΚΟΜΜΑΤΟΣ</string>
+
+
+    <string name="menu_vote_create">Δημιουργία Ψηφοφορίας</string>
+    <string name="menu_add_party">Προσθήκη κόμματος</string>
+    <string name="menu_remove_party">Αφαίρεση κόμματος</string>
 
 </resources>
