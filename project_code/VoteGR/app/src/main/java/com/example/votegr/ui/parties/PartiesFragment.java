@@ -25,7 +25,7 @@ public class PartiesFragment extends Fragment {
             ViewGroup container, Bundle savedInstanceState) {
         PartiesViewModel partiesViewModel =  new ViewModelProvider(this).get(PartiesViewModel.class);
 
-        root = inflater.inflate(R.layout.fragment_parties, container, false);
+        root = inflater.inflate(R.layout.citizen_fragment_parties, container, false);
         textView = root.findViewById(R.id.TEXT_STATUS_ID);
 
 

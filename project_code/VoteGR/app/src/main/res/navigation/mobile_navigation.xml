@@ -9,29 +9,53 @@
         android:id="@+id/nav_home"
         android:name="com.example.votegr.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/citizen_fragment_home" />
 
     <fragment
         android:id="@+id/nav_vote"
         android:name="com.example.votegr.ui.vote.VoteFragment"
         android:label="@string/menu_vote"
-        tools:layout="@layout/fragment_vote" />
+        tools:layout="@layout/citizen_fragment_vote" />
 
     <fragment
         android:id="@+id/nav_stats"
         android:name="com.example.votegr.ui.stats.StatsFragment"
         android:label="@string/menu_stats"
-        tools:layout="@layout/fragment_stats" />
+        tools:layout="@layout/citizen_fragment_stats" />
 
     <fragment
         android:id="@+id/nav_parties"
         android:name="com.example.votegr.ui.parties.PartiesFragment"
         android:label="@string/menu_parties"
-        tools:layout="@layout/fragment_parties" />
+        tools:layout="@layout/citizen_fragment_parties" />
 
     <fragment
         android:id="@+id/nav_history"
         android:name="com.example.votegr.ui.history.HistoryFragment"
         android:label="@string/menu_history"
-        tools:layout="@layout/fragment_parties" />
+        tools:layout="@layout/citizen_fragment_parties" />
+
+    <fragment
+        android:id="@+id/nav_vote_create"
+        android:name="com.example.votegr.ui.vote_create.VoteCreateFragment"
+        android:label="@string/menu_vote_create"
+        tools:layout="@layout/admin_fragment_vote_create" />
+
+    <fragment
+        android:id="@+id/nav_statement"
+        android:name="com.example.votegr.ui.statement.StatementFragment"
+        android:label="@string/menu_statement"
+        tools:layout="@layout/party_fragment_statement" />
+
+    <fragment
+        android:id="@+id/nav_add_party"
+        android:name="com.example.votegr.ui.add_party.AddPartyFragment"
+        android:label="@string/menu_add_party"
+        tools:layout="@layout/admin_fragment_add_party" />
+
+    <fragment
+        android:id="@+id/nav_remove_party"
+        android:name="com.example.votegr.ui.remove_party.RemovePartyFragment"
+        android:label="@string/menu_remove_party"
+        tools:layout="@layout/admin_fragment_remove_party" />
 </navigation>

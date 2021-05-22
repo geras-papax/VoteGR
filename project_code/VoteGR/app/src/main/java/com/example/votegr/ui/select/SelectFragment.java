@@ -1,26 +1,23 @@
-package com.example.votegr.ui.history;
+package com.example.votegr.ui.select;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
+
 import com.example.votegr.R;
 
 
-public class HistoryFragment extends Fragment {
+public class SelectFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HistoryViewModel historyViewModel =  new ViewModelProvider(this).get(HistoryViewModel.class);
+        //HistoryViewModel historyViewModel =  new ViewModelProvider(this).get(HistoryViewModel.class);
         View root = inflater.inflate(R.layout.citizen_fragment_history, container, false);
-        final TextView textView = root.findViewById(R.id.TEXT_STATUS_ID);
+        /*final TextView textView = root.findViewById(R.id.TEXT_STATUS_ID);
         Spinner dropdown = root.findViewById(R.id.spinner);
 
         String[] items = new String[]{"Δημοψήφισμα 27/06/2017",
@@ -46,7 +43,7 @@ public class HistoryFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> adapterView) {
                 // TODO Auto-generated method stub
             }
-        });
+        });*/
 
 
         return root;

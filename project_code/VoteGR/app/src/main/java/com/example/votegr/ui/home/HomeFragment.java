@@ -18,7 +18,7 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        View root = inflater.inflate(R.layout.citizen_fragment_home, container, false);
         final TextView text_home_msg = root.findViewById(R.id.text_home_msg);
         final TextView text_home_name = root.findViewById(R.id.text_home_name);
         final TextView text_home_afm = root.findViewById(R.id.text_home_afm);
