@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_weight="1.0">
+
+        <Spinner
+            android:id="@+id/spinnerparties"
+            android:layout_width="match_parent"
+            android:layout_height="264dp"
+            android:layout_marginTop="76dp"
+            android:layout_weight="1.0"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:layout_marginTop="104dp"
+            android:text="ΑΦΑΙΡΕΣΗ"
+            android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerparties"
+            tools:layout_editor_absoluteX="102dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
