@@ -23,15 +23,15 @@ DROP TABLE IF EXISTS `vote_stats`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `vote_stats` (
-  `idvote_stats` int(11) NOT NULL,
+  `idvote_stats` int(11) NOT NULL AUTO_INCREMENT,
   `yes` int(11) DEFAULT NULL,
   `no` int(11) DEFAULT NULL,
   `white` int(11) DEFAULT NULL,
-  `ref_vote_id` int(11) NOT NULL,
+  `ref_vote_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`idvote_stats`),
-  KEY `refvoteId_idx` (`ref_vote_id`),
-  CONSTRAINT `refvoteId` FOREIGN KEY (`ref_vote_id`) REFERENCES `vote` (`idvote`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `votestatsid_idx` (`ref_vote_id`),
+  CONSTRAINT `votestatsid` FOREIGN KEY (`ref_vote_id`) REFERENCES `vote` (`idvote`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `vote_stats` (
 
 LOCK TABLES `vote_stats` WRITE;
 /*!40000 ALTER TABLE `vote_stats` DISABLE KEYS */;
+INSERT INTO `vote_stats` VALUES (1,2564854,1245678,785412,1);
 /*!40000 ALTER TABLE `vote_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-03 22:02:13
+-- Dump completed on 2021-06-05 18:09:09

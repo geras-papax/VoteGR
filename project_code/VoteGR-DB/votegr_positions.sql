@@ -23,16 +23,16 @@ DROP TABLE IF EXISTS `positions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `positions` (
-  `idpositions` int(11) NOT NULL,
+  `idpositions` int(11) NOT NULL AUTO_INCREMENT,
   `party_opinion` longtext,
   `party_id` varchar(45) NOT NULL,
   `vote_id_about` int(11) NOT NULL,
   PRIMARY KEY (`idpositions`),
   KEY `partyId_idx` (`party_id`),
-  KEY `voteIdabout_idx` (`vote_id_about`),
+  KEY `votepartyposId_idx` (`vote_id_about`),
   CONSTRAINT `partyId` FOREIGN KEY (`party_id`) REFERENCES `party` (`username`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `voteIdabout` FOREIGN KEY (`vote_id_about`) REFERENCES `vote` (`idvote`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `votepartyposId` FOREIGN KEY (`vote_id_about`) REFERENCES `vote` (`idvote`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `positions` (
 
 LOCK TABLES `positions` WRITE;
 /*!40000 ALTER TABLE `positions` DISABLE KEYS */;
+INSERT INTO `positions` VALUES (1,'Εμείς είμαστε υπέρ του ΝΑΙ, παρά τις δυσκολίες','komma_1',1);
 /*!40000 ALTER TABLE `positions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-03 22:02:13
+-- Dump completed on 2021-06-05 18:09:09
