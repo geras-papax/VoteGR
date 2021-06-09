@@ -9,21 +9,23 @@
 			$db->set_charset("utf8");
 
 			$todate = date("Y-m-d");
-			$sql = "SELECT `vote`.`subject`,
-			`vote_stats`.`yes`,
-			`vote_stats`.`no`,
-			`vote_stats`.`white`
-			FROM `votegr`.`vote_stats`
-			INNER JOIN `vote` ON `vote_stats`.`ref_vote_id` = `vote`.`idvote`;";
-			
+			$sql = "SELECT title FROM party;";
+            $sql1 = "SELECT vote.starting_date from votegr.vote;";
+
 
 			$stmt = mysqli_query($db, $sql);
-			
-			while($row = mysqli_fetch_assoc($stmt))
-			{
-				echo json_encode($row, JSON_UNESCAPED_UNICODE);
-			}
-			
+            $stmt1 = mysqli_query($db, $sql1);
+            $data = mysqli_fetch_all($stmt);
+            $data1 = mysqli_fetch_all($stmt1);
+	
+			//echo json_encode($data, JSON_UNESCAPED_UNICODE);
+			$result = [
+				"parties" => $data,
+				"votings" => $data1,
+			];
+
+
+			echo json_encode($result, JSON_UNESCAPED_UNICODE);
 		}
 		else {
 			throw new Exception('Unable to connect');
@@ -32,5 +34,4 @@
 	catch(Exception $e) {
 		echo $e->getMessage();
 	}
-
 ?>
