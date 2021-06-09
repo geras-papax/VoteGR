@@ -1,19 +1,32 @@
 package com.example.votegr.ui.parties;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PartiesViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
+    List<String> parties;
+    List<String> votings;
+
 
     public PartiesViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        parties = new ArrayList<>();
+        votings = new ArrayList<>();
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public List<String> getParties() {
+        return parties;
+    }
+    public void setParties(List<String> parties) {
+        this.parties = parties;
+    }
+
+    public List<String> getVotings() {
+        return votings;
+    }
+    public void setVotings(List<String> votings) {
+        this.votings = votings;
     }
 }
