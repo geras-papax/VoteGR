@@ -14,34 +14,66 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView2"
             android:layout_width="216dp"
             android:layout_height="93dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center_horizontal|center_vertical"
             android:text="VoteGR"
             android:textSize="36sp" />
 
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="93dp"
+            android:layout_marginBottom="100dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Ψήφισε με ασφάλεια"
+            android:textSize="22sp" />
 
-        <Button
-            android:id="@+id/citizen_button"
-            android:layout_width="149dp"
-            android:layout_height="87dp"
-            android:layout_marginBottom="44dp"
-            android:text="ΕΙΣΟΔΟΣ ΩΣ ΠΟΛΙΤΗΣ" />
+        <EditText
+            android:id="@+id/user_detail"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="ΑΦΜ / Όνομα Χρήστη" />
 
-        <Button
-            android:id="@+id/party_button"
-            android:layout_width="149dp"
-            android:layout_height="87dp"
-            android:layout_marginBottom="44dp"
-            android:text="ΕΙΣΟΔΟΣ ΩΣ ΚΟΜΜΑ" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Κωδικός" />
 
-        <Button
-            android:id="@+id/admin_button"
-            android:layout_width="149dp"
-            android:layout_height="87dp"
-            android:text="ΕΙΣΟΔΟΣ ΩΣ ΔΙΑΧΕΙΡΙΣΤΗΣ" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="149dp"
+                android:layout_height="87dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp"
+                android:text="ΕΙΣΟΔΟΣ" />
+
+
+        <!--        <Button-->
+<!--            android:id="@+id/citizen_button"-->
+<!--            android:layout_width="149dp"-->
+<!--            android:layout_height="87dp"-->
+<!--            android:layout_marginBottom="44dp"-->
+<!--            android:text="ΕΙΣΟΔΟΣ ΩΣ ΠΟΛΙΤΗΣ" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/party_button"-->
+<!--            android:layout_width="149dp"-->
+<!--            android:layout_height="87dp"-->
+<!--            android:layout_marginBottom="44dp"-->
+<!--            android:text="ΕΙΣΟΔΟΣ ΩΣ ΚΟΜΜΑ" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/admin_button"-->
+<!--            android:layout_width="149dp"-->
+<!--            android:layout_height="87dp"-->
+<!--            android:text="ΕΙΣΟΔΟΣ ΩΣ ΔΙΑΧΕΙΡΙΣΤΗΣ" />-->
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

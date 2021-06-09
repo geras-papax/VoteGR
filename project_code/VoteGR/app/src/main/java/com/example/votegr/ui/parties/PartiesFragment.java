@@ -172,10 +172,6 @@ public class PartiesFragment extends Fragment {
         textSubject = root.findViewById(R.id.text_subject);
         textOpinion = root.findViewById(R.id.text_opinion);
 
-
-
-
-
         parties_dropdown = root.findViewById(R.id.spinnerparties);
         votings_dropdown = root.findViewById(R.id.spinnervotings);
 
@@ -198,8 +194,6 @@ public class PartiesFragment extends Fragment {
         }
         textSubject.setText("");
         textOpinion.setText("Δεν βρέθηκε κάποια επίσημη θέση");
-
-        //textView.setText("Θέση του κόμματος: " + party_selected + " για το: " + voting_selected);
     }
 
 }
