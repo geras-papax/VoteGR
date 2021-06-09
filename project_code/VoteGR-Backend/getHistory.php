@@ -12,18 +12,21 @@
 			$sql = "SELECT `vote`.`subject`,
 			`vote_stats`.`yes`,
 			`vote_stats`.`no`,
-			`vote_stats`.`white`
+			`vote_stats`.`white`,
+			`vote`.`starting_date`
 			FROM `votegr`.`vote_stats`
 			INNER JOIN `vote` ON `vote_stats`.`ref_vote_id` = `vote`.`idvote`;";
-			
+
 
 			$stmt = mysqli_query($db, $sql);
-			
-			while($row = mysqli_fetch_assoc($stmt))
-			{
-				echo json_encode($row, JSON_UNESCAPED_UNICODE);
+
+			$result = array();
+
+			while($row = mysqli_fetch_assoc($stmt)) {
+				$result[] = $row;
 			}
-			
+
+			echo json_encode($result, JSON_UNESCAPED_UNICODE);
 		}
 		else {
 			throw new Exception('Unable to connect');
