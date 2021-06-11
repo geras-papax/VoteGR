@@ -27,6 +27,7 @@ CREATE TABLE `citizen` (
   `citizen_name` char(30) NOT NULL,
   `citizen_surname` char(45) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
+  `password` char(45) NOT NULL,
   PRIMARY KEY (`afm`),
   KEY `userId_idx` (`user_id`),
   CONSTRAINT `userId` FOREIGN KEY (`user_id`) REFERENCES `users` (`idusers`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -39,7 +40,7 @@ CREATE TABLE `citizen` (
 
 LOCK TABLES `citizen` WRITE;
 /*!40000 ALTER TABLE `citizen` DISABLE KEYS */;
-INSERT INTO `citizen` VALUES (12345678,'Γιώργος','Πολίτης',1),(87654321,'Χρήστος','Στάμου',4);
+INSERT INTO `citizen` VALUES (12345678,'Γιώργος','Πολίτης',1,12345678),(87654321,'Χρήστος','Στάμου',4,87654321);
 /*!40000 ALTER TABLE `citizen` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
