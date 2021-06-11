@@ -1,6 +1,8 @@
 package com.example.votegr;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -62,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
                                 } else if(response.equals("admin")) {
                                     startActivity(new Intent(MainActivity.this, AdminActivity.class));
                                 }
+
+                                // save user_detail & password
+                                SharedPreferences sharedPref = getSharedPreferences("user_data", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPref.edit();
+                                editor.putString("user_detail", user_detail.getText().toString());
+                                //editor.putString("password", password.getText().toString());
+                                editor.apply();
                             }
                         },
                         new Response.ErrorListener()
