@@ -21,10 +21,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.votegr.AdminActivity;
 import com.example.votegr.CitizenActivity;
 import com.example.votegr.R;
-import com.example.votegr.ui.statement.StatementViewModel;
 
 import org.json.JSONException;
 import org.json.JSONObject;

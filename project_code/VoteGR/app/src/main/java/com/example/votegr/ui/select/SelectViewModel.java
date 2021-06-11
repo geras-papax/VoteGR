@@ -1,19 +1,8 @@
-package com.example.votegr.ui.select.history;
+package com.example.votegr.ui.select;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class SelectViewModel extends ViewModel {
 
-    private MutableLiveData<String> mText;
-
-    /*public HistoryViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is history fragment");
-    }
-
-    public LiveData<String> getText() {
-        return mText;
-    }*/
+    public SelectViewModel() { }
 }
