@@ -1,31 +1,40 @@
 package com.example.votegr.ui.home;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
 
 public class HomeViewModel extends ViewModel {
 
-    private MutableLiveData<String> msg;
-    private MutableLiveData<String> name;
-    private MutableLiveData<String> afm;
+    private String msg;
+    private String name;
+    private String role;
 
     public HomeViewModel() {
-        msg = new MutableLiveData<>();
-        name = new MutableLiveData<>();
-        afm = new MutableLiveData<>();
-        msg.setValue("Καλωσήρθες!");
-        name.setValue("Όνομα: Αγησίλαος Κουνέλης");
-        afm.setValue("ΑΦΜ: 1059637");
+        setMessage("Καλωσήρθες");
     }
 
-    public LiveData<String> getMessage() {
+    public String getMessage() {
         return msg;
     }
-    public LiveData<String> getName() {
+    public String getName() {
         return name;
     }
-    public LiveData<String> getAfm() {
-        return afm;
+    public String getRole() {
+        return role;
+    }
+    public void setMessage(String msg) {
+        this.msg=msg;
+    }
+    public void setName(String name) {
+        this.name= "Αναγνωριστικό Σύνδεσης: " + name;
+    }
+    public void setRole(String role) {
+        if(role.equals("citizen")) {
+            this.role = "Σύνδεση ως Πολίτης";
+        } else if(role.equals("party")) {
+            this.role = "Σύνδεση ως Κόμμα";
+        } else if(role.equals("admin")) {
+            this.role = "Σύνδεση ως Διαχειριστής";
+        }
     }
 }

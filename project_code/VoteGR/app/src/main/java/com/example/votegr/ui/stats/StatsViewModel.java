@@ -6,9 +6,7 @@ public class StatsViewModel extends ViewModel {
 
     private String stats_text;
 
-    public StatsViewModel() {
-        stats_text = "Έχουν ψηφίσει: 4.012.717 / 9.984.934";
-    }
+    public StatsViewModel() { }
 
     public String getStatsText() {
         return stats_text;
